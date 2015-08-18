@@ -2,6 +2,9 @@
 /*
 Plugin Name: topic access key
 Description: Защита тем форума ключом доступа
+GitHub Plugin URI: https://github.com/systemo-biz/url-access
+GitHub Branch: master
+Version: 20150816-1
 */
 
 add_action('wp_ajax_enable_key_access', 'enable_key_access');
@@ -31,7 +34,7 @@ function add_topic_access_key(){
                         exit;
                 }
 
-                //Подключаем плагин zClip, который понадобится для копирования ссылки в буфер обмена 
+                //Подключаем плагин zClip, который понадобится для копирования ссылки в буфер обмена
                 wp_enqueue_script( 'zClip', plugin_dir_url(__FILE__).'zClip/ZeroClipboard.js');
                 ?>
                 <style>
@@ -74,7 +77,7 @@ function add_topic_access_key(){
                                                         thisForAjax.removeClass('btn-default').addClass('btn-warning').text("Вкл");
                                                         $('#access-link,#copy').show();
                                                         $('#access-link').val($('#access-link').val()+'?key='+data).select();
-                                                }           
+                                                }
                                         });
                                         }else{
                                                 $.ajax({
@@ -83,14 +86,14 @@ function add_topic_access_key(){
                                                         post_id: <?php bbp_topic_id(); ?>,
                                                         }),
                                                         url: "<?php echo admin_url('admin-ajax.php') ?>",
-                                                        success: function(){                                                                
+                                                        success: function(){
                                                                 thisForAjax.removeClass('btn-warning').addClass('btn-default').text("Выкл");
                                                                 $('#access-link,#copy').hide();
                                                                 $('#access-link').val('<?php echo $topic_url;?>');
-                                                        }           
+                                                        }
                                                 });
                                         }
-                                        
+
                                 });
                 })
                 </script>
