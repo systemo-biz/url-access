@@ -4,7 +4,7 @@ Plugin Name: topic access key
 Description: Защита тем форума ключом доступа
 GitHub Plugin URI: https://github.com/systemo-biz/url-access
 GitHub Branch: master
-Version: 20150816-1
+Version: 20150816-2
 */
 
 add_action('wp_ajax_enable_key_access', 'enable_key_access');
