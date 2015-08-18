@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: topic access key
-Description: Защита тем форума ключом доступа
+Plugin Name: URL-access
+Description: Доступ к постам по URL
 GitHub Plugin URI: https://github.com/systemo-biz/url-access
 GitHub Branch: master
 Version: 20150816-2
