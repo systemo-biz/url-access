@@ -4,7 +4,7 @@ Plugin Name: URL-access
 Description: Доступ к постам по URL
 GitHub Plugin URI: https://github.com/systemo-biz/url-access
 GitHub Branch: master
-Version: 20150816-2
+Version: 20150816-3
 */
 
 add_action('wp_ajax_enable_key_access', 'enable_key_access');
